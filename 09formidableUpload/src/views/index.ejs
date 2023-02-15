@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Main Page</title>
+        <link rel="stylesheet" href="./css/bootstrap.css"/>
+    </head>
+    <body>
+        <div class="container-fluid ">
+            <div class="container d-flex justify-content justify-content-center">
+                <form name="imageUpload" action="/imageUpload" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="imageTitle" class="form-control-label">Image Title</label>
+                        <input type="text" name="imageTitle" id="imageUpload" class="form-control" placeholder="Title">
+                        <label for="imageUpload" class="form-control-label">Upload Image</label>
+                        <input type="file" name="imageFile" id="imageFile" class="form-control"/>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Upload</button> 
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
