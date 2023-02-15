@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Index Page</title>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="container d-flex justify-content justify-content-center align-items-center">
+                <form name="imgUploadForm" action="/uploadImage" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="col-form-label">Image Title</label>
+                        <input type="text" class="form-control" name="imgTitle" id="title">
+                        <label class="col-form-label">Upload Image</label>
+                        <input type="file" class="form-control" name="imgUpload" id="imgUpload">
+                        <br>
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
