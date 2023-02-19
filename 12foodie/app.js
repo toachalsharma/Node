@@ -173,6 +173,19 @@ app.post('/removeOrder',(req,res)=>{
     })
 })
 
+//update order
+app.put('/updateOrder',(req,res)=>{
+    let orderId=req.body._id;
+    let status=req.body.status;
+    db.collection('orders').updateOne(
+        {_id:mongo.ObjectId(orderId)},
+        {$set: {"status":req.body.status}},
+        (err,data)=>{
+            if(err) throw err;
+            res.send("Order status updated successfully");
+        })
+})
+
 mongoClient.connect(url,(err,dbCon)=>{
     if(err) throw err;
     db=dbCon.db("foodiedb");
