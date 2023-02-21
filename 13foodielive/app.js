@@ -188,7 +188,7 @@ app.put('/updateOrder',(req,res)=>{
         })
 })
 
-mongoClient.connect(url,(err,dbCon)=>{
+mongoClient.connect(url,{useNewUrlParser:true},(err,dbCon)=>{
     if(err) throw err;
     db=dbCon.db("foodiedb");
     app.listen(port,(err)=>{
